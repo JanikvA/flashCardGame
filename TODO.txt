@@ -1,4 +1,5 @@
 read up on virtual env
+check bookmark for perfect python project
 build dummy gui (control via keyboard shortcuts should be possible)
 define flexible flashcard format and import dummy text
 Use webscraping to get some info for chinese
@@ -19,6 +20,26 @@ python logging module
 
 use SQL to store flash card data base?
 
+copy right stuff?
+
+Creating a user profile?
+
+cross platform executable?
+
 port as an android app?
 
 port as web application?
+
+
+
+modules:
+
+flashcard
+
+gui
+
+settings
+
+user profile?
+
+stat tracking
