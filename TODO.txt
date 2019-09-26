@@ -5,3 +5,6 @@ allow integration of images to the flashcards
 implement games where you can choose from like 8 possible answers
 
 implement a way to save your progress and repeat flashcards based on your level of confidence in them
+
+track learning statistics
+    Use these to train some ML?
