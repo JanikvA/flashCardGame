@@ -1,5 +1,7 @@
+read up on virtual env
 build dummy gui (control via keyboard shortcuts should be possible)
 define flexible flashcard format and import dummy text
+Use webscraping to get some info for chinese
 allow integration of images to the flashcards
 
 implement games where you can choose from like 8 possible answers
@@ -8,3 +10,15 @@ implement a way to save your progress and repeat flashcards based on your level 
 
 track learning statistics
     Use these to train some ML?
+
+CI in github?
+
+unit tests
+
+python logging module
+
+use SQL to store flash card data base?
+
+port as an android app?
+
+port as web application?
