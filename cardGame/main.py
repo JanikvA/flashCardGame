@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import tkinter as tk
+import randomCardMode
 
 
 class Application(tk.Frame):
@@ -16,12 +17,27 @@ class Application(tk.Frame):
         self.hi_there["command"] = self.say_hi
         self.hi_there.pack(side="top")
 
+        self.randomCardMode = tk.Button(self)
+        self.randomCardMode["text"]="Start random card mode!"
+        self.randomCardMode["command"] = self.startRCM
+        self.randomCardMode.pack(side="top")
+
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy)
         self.quit.pack(side="bottom")
 
     def say_hi(self):
         print("hi there, everyone!")
+
+    def startRCM(self):
+        self.clearScreen()
+        randomCardMode.main(self.master)
+
+    def clearScreen(self):
+        for widget in self.master.winfo_children():
+            widget.destroy()
+        
+
 
 def main(args):
     root = tk.Tk()

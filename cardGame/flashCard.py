@@ -7,15 +7,7 @@ class flashCard:
     def __init__(self):
         self.content = {"front": None, "back": None}
 
-    def readJSON(self, jsonName):
-        with open(jsonName) as json_file:
-            data = json.load(json_file)
-            for cards in data["flashCards"]:
-                for side in data["flashCards"][cards]:
-                    # self.setContent(side, text=data["flashCards"][cards][side]["text"])
-                    self.setContent(side, **data["flashCards"][cards][side])
-
-    #  TODO: implement audio and image arguments <27-09-19, Janik von Ahnen> # 
+    #  TODO: implement audio and image arguments <27-09-19, Janik von Ahnen> #
     def setContent(self, side, text=None):
         if side not in self.content.keys():
             raise ValueError(
@@ -29,6 +21,18 @@ class flashCard:
 
     def flip(self, arg):
         pass
+
+    @classmethod
+    def readFlashCardJSON(self, jsonName):
+        flashCards = []
+        with open(jsonName) as json_file:
+            data = json.load(json_file)
+            for cards in data["flashCards"]:
+                flashC = flashCard()
+                flashCards.append(flashC)
+                for side in cards:
+                    flashC.setContent(side, **cards[side])
+        return flashCards
 
 
 class flashCardContent:

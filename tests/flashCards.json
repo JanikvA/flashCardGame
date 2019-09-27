@@ -1,12 +1,31 @@
 {
-  "flashCards": {
-    "1": {
+  "flashCards": [
+
+      {
       "front": {
         "text": "yi1"
       },
       "back": {
         "text": "one"
       }
-    }
-  }
+      },
+
+      {
+      "front": {
+        "text": "er2"
+      },
+      "back": {
+        "text": "two"
+      }
+      },
+
+      {
+      "front": {
+        "text": "san3"
+      },
+      "back": {
+        "text": "three"
+      }
+      }
+  ]
 }

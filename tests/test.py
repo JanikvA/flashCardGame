@@ -7,10 +7,11 @@ import cardGame.flashCard
 # from cardGame import flashCard
 
 def test_flashCard(jsonName):
-    card=cardGame.flashCard.flashCard()
-    card.readJSON(jsonName)
-    card.showContent("front")
-    card.showContent("back")
+    # card=cardGame.flashCard.flashCard()
+    cards=cardGame.flashCard.flashCard.readFlashCardJSON(jsonName)
+    for c in cards:
+        c.showContent("front")
+        c.showContent("back")
 
 
 def main(args):
