@@ -5,14 +5,10 @@ import json
 
 class flashCard:
     def __init__(self):
-        self.content = {"front": None, "back": None}
+        self.content = {}
 
     #  TODO: implement audio and image arguments <27-09-19, Janik von Ahnen> #
     def setContent(self, side, text=None):
-        if side not in self.content.keys():
-            raise ValueError(
-                "flashCard.setContent: side argument is not 'front' or 'back'!"
-            )
         fcc = flashCardContent(text=text)
         self.content[side] = fcc
 
@@ -27,6 +23,13 @@ class flashCard:
         for k, v in self.content.items():
             di[k] = v.getDictJSON()
         return di
+
+    def fullCardContent(self):
+        prettyString = ""
+        tmpD = self.getDictJSON()
+        for k in tmpD:
+            prettyString += str(k)+"  :  "+str(tmpD[k])+"\n--------\n"
+        return prettyString
 
     @classmethod
     def readFlashCardJSON(self, jsonName):
@@ -53,3 +56,9 @@ class flashCardContent:
         for attr in ["text"]:
             di[attr] = getattr(self, attr)
         return di
+
+    def __repr__(self):
+        prettyString = "Printing attributes for flashCardContent object:\n--------\n"
+        for k in self.__dict__:
+            prettyString += str(k)+"  :  "+str(self.__dict__[k])+"\n--------\n"
+        return prettyString

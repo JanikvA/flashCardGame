@@ -25,8 +25,6 @@ class userClass():
             userClass.allUserJSONName)
 
     def writeUserInfo(self):
-        # data = {"flashCards": {i: fc.getDictJSON()
-        #                        for i, fc in enumerate(self.allFlashCards)}}
         data = {"flashCards": [fc.getDictJSON()
                                for fc in self.allFlashCards]}
         print(data)

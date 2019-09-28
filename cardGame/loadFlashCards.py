@@ -26,5 +26,3 @@ class loadFlashCards(tk.Frame):
     @classmethod
     def load(cls, frame, user):
         obj = loadFlashCards(master=frame, user=user)
-        # obj.create_widgets()
-        # obj.mainloop()

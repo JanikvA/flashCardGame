@@ -40,21 +40,17 @@ class Application(tk.Frame):
 
     def startRCM(self):
         utils.clearScreen(self.master)
-        print(" #### *!*Debug*!* ####  1 ", self.user.allFlashCards)
-        print(" #### *!*Debug*!* #### ,self.user 1 ", self.user)
         randomCardMode.randomCardMode.load(frame=self.master, user=self.user)
-        print(" #### *!*Debug*!* ####  3 ", self.user.allFlashCards)
 
 
 def main(args):
     #  TODO: Handle user login properly <28-09-19, Janik von Ahnen> #
     dummyUser = userCards.userClass(name="Janik")
     dummyUser.loadUserInfo()
-    print(dummyUser.allFlashCards)
     root = tk.Tk()
     app = Application(master=root, user=dummyUser)
     app.mainloop()
-    # dummyUser.writeUserInfo()
+    dummyUser.writeUserInfo()
 
 
 if __name__ == "__main__":
