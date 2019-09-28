@@ -1,13 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import tkinter as tk
-import randomCardMode
+# import randomCardMode
+import loadFlashCards
+import utils
+import userCards
 
 
 class Application(tk.Frame):
-    def __init__(self, master=None):
+    def __init__(self, master=None, user=None):
         super().__init__(master)
         self.master = master
+        self.user = user
         self.pack()
         self.create_widgets()
 
@@ -17,35 +21,45 @@ class Application(tk.Frame):
         self.hi_there["command"] = self.say_hi
         self.hi_there.pack(side="top")
 
-        self.randomCardMode = tk.Button(self)
-        self.randomCardMode["text"]="Start random card mode!"
-        self.randomCardMode["command"] = self.startRCM
-        self.randomCardMode.pack(side="top")
+        # self.randomCardMode = tk.Button(self)
+        # self.randomCardMode["text"] = "Start random card mode!"
+        # self.randomCardMode["command"] = self.startRCM
+        # self.randomCardMode.pack(side="top")
 
-        self.quit = tk.Button(self, text="QUIT", fg="red",
-                              command=self.master.destroy)
+        self.loadFlashCards = tk.Button(
+            text='Load flash cards', command=self.loadFlashCards).pack(fill="none")
+
+        self.quit = tk.Button(
+            self, text="QUIT", fg="red", command=self.master.destroy
+        )
         self.quit.pack(side="bottom")
 
     def say_hi(self):
         print("hi there, everyone!")
 
-    def startRCM(self):
-        self.clearScreen()
-        randomCardMode.main(self.master)
+    def loadFlashCards(self):
+        utils.clearScreen(self.master)
+        loadFlashCards.loadFlashCards.load(frame=self.master, user=self.user)
 
-    def clearScreen(self):
-        for widget in self.master.winfo_children():
-            widget.destroy()
-        
+    # def startRCM(self):
+    #     utils.clearScreen(self)
+    #     randomCardMode.main(self.master)
 
 
 def main(args):
+    #  TODO: Handle user login properly <28-09-19, Janik von Ahnen> #
+    dummyUser = userCards.userClass(name="Janik")
     root = tk.Tk()
-    app = Application(master=root)
+    app = Application(master=root, user=dummyUser)
     app.mainloop()
+    dummyUser.writeUserInfo()
+
 
 if __name__ == "__main__":
     import argparse
-    parser = argparse.ArgumentParser(description="Simple game for learning flash cards.")
+
+    parser = argparse.ArgumentParser(
+        description="Simple game for learning flash cards."
+    )
     args = parser.parse_args()
     main(args)

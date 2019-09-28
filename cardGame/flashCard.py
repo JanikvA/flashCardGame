@@ -22,6 +22,12 @@ class flashCard:
     def flip(self, arg):
         pass
 
+    def getDictJSON(self):
+        di = {}
+        for k, v in self.content.items():
+            di[k] = v.getDictJSON()
+        return di
+
     @classmethod
     def readFlashCardJSON(self, jsonName):
         flashCards = []
@@ -41,3 +47,9 @@ class flashCardContent:
 
     def show(self):
         print(self.text)
+
+    def getDictJSON(self):
+        di = {}
+        for attr in ["text"]:
+            di[attr] = getattr(self, attr)
+        return di
