@@ -12,26 +12,28 @@ class randomCardMode(tk.Frame):
         self.user = userName
         self.pack()
         self.create_widgets()
+        self.currentFlashCard = None
 
     def create_widgets(self):
         self.randomCardMode = tk.Button(
             text='next', command=self.next).pack(fill="none")
+        self.showSolution = tk.Button(
+            text='show solution', command=lambda: self.showFullCard(self.currentFlashCard)).pack(fill="none")
         self.quit = tk.Button(self, text="QUIT", fg="red",
                               command=self.master.destroy).pack(side="bottom")
 
     def next(self):
+        for s in self.master.pack_slaves():
+            if s.__class__.__name__ == 'Label':
+                s.destroy()
         nextCard = random.choice(self.user.allFlashCards)
-        nextCard.showContent("front")
-        self.cardLabel = tk.Button(self.master,
-                                   text=nextCard.content["front"].__repr__(), command=lambda: self.showFullCard(nextCard)).pack(fill="none")
-        for widget in self.master.winfo_children():
-            print(widget)
+        self.currentFlashCard = nextCard
+        self.cardLabel = tk.Label(
+            self.master, text=nextCard.content[random.choice(list(nextCard.content.keys()))].__repr__()).pack()
 
     def showFullCard(self, flashCard):
-        utils.clearScreen(self.master)
-        self.create_widgets()
-        self.cardLabel = tk.Button(self.master,
-                                   text=flashCard.fullCardContent(), command=self.next).pack(fill="none")
+        self.cardLabel = tk.Label(
+            self.master, text=flashCard.fullCardContent()).pack()
 
     @classmethod
     def load(cls, frame, user):
