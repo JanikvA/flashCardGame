@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import tkinter as tk
-# import randomCardMode
+import randomCardMode
 import loadFlashCards
 import utils
 import userCards
@@ -20,11 +20,8 @@ class Application(tk.Frame):
         self.hi_there["text"] = "Hello World\n(click me)"
         self.hi_there["command"] = self.say_hi
         self.hi_there.pack(side="top")
-
-        # self.randomCardMode = tk.Button(self)
-        # self.randomCardMode["text"] = "Start random card mode!"
-        # self.randomCardMode["command"] = self.startRCM
-        # self.randomCardMode.pack(side="top")
+        self.startRCM = tk.Button(
+            text='Random card mode', command=self.startRCM).pack(fill="none")
 
         self.loadFlashCards = tk.Button(
             text='Load flash cards', command=self.loadFlashCards).pack(fill="none")
@@ -41,18 +38,23 @@ class Application(tk.Frame):
         utils.clearScreen(self.master)
         loadFlashCards.loadFlashCards.load(frame=self.master, user=self.user)
 
-    # def startRCM(self):
-    #     utils.clearScreen(self)
-    #     randomCardMode.main(self.master)
+    def startRCM(self):
+        utils.clearScreen(self.master)
+        print(" #### *!*Debug*!* ####  1 ", self.user.allFlashCards)
+        print(" #### *!*Debug*!* #### ,self.user 1 ", self.user)
+        randomCardMode.randomCardMode.load(frame=self.master, user=self.user)
+        print(" #### *!*Debug*!* ####  3 ", self.user.allFlashCards)
 
 
 def main(args):
     #  TODO: Handle user login properly <28-09-19, Janik von Ahnen> #
     dummyUser = userCards.userClass(name="Janik")
+    dummyUser.loadUserInfo()
+    print(dummyUser.allFlashCards)
     root = tk.Tk()
     app = Application(master=root, user=dummyUser)
     app.mainloop()
-    dummyUser.writeUserInfo()
+    # dummyUser.writeUserInfo()
 
 
 if __name__ == "__main__":

@@ -22,10 +22,13 @@ class userClass():
 
     def loadUserInfo(self):
         self.allFlashCards += flashCard.flashCard.readFlashCardJSON(
-            allUserJSONName)
+            userClass.allUserJSONName)
 
     def writeUserInfo(self):
-        data = {i: fc.getDictJSON() for i, fc in enumerate(self.allFlashCards)}
+        # data = {"flashCards": {i: fc.getDictJSON()
+        #                        for i, fc in enumerate(self.allFlashCards)}}
+        data = {"flashCards": [fc.getDictJSON()
+                               for fc in self.allFlashCards]}
         print(data)
         with open(userClass.allUserJSONName, 'w') as outfile:
             json.dump(data, outfile)
