@@ -21,8 +21,8 @@ class Application(tk.Frame):
 
     def create_widgets(self):
         self.startRandomCardMode = tk.Button(self)
-        self.startRandomCardMode["text"]='Random card mode(j)'
-        self.startRandomCardMode["command"]=self.startRCM
+        self.startRandomCardMode["text"] = 'Random card mode(j)'
+        self.startRandomCardMode["command"] = self.startRCM
         self.startRandomCardMode.pack(fill="none")
 
         self.loadFlashCards = tk.Button(
@@ -33,7 +33,6 @@ class Application(tk.Frame):
             self, text="QUIT(q)", fg="red", command=self.master.destroy
         )
         self.quit.pack(side="bottom")
-
 
     def loadFlashCards(self):
         utils.clearScreen(self.master)
@@ -52,7 +51,6 @@ def main(args):
     app = Application(master=root, user=dummyUser)
     app.mainloop()
     dummyUser.writeUserInfo()
-
 
 
 if __name__ == "__main__":
