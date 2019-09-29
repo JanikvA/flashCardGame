@@ -58,7 +58,7 @@ class flashCardContent:
         return di
 
     def __repr__(self):
-        prettyString = "Printing attributes for flashCardContent object:\n--------\n"
+        prettyString = ""
         for k in self.__dict__:
             prettyString += str(k)+"  :  "+str(self.__dict__[k])+"\n--------\n"
         return prettyString
