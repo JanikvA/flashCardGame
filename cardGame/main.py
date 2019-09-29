@@ -15,24 +15,24 @@ class Application(tk.Frame):
         self.pack()
         self.create_widgets()
 
+        # self.master.bind('<KP_1>', lambda event: self.startRCM())
+        # self.master.bind('<KP_2>', lambda event: self.loadFlashCards())
+        # self.master.bind('<KP_9>', lambda event: self.master.destroy())
+
     def create_widgets(self):
-        self.hi_there = tk.Button(self)
-        self.hi_there["text"] = "Hello World\n(click me)"
-        self.hi_there["command"] = self.say_hi
-        self.hi_there.pack(side="top")
-        self.startRCM = tk.Button(
-            text='Random card mode', command=self.startRCM).pack(fill="none")
+        self.startRCM = tk.Button(self)
+        self.startRCM["text"]='Random card mode(1)'
+        self.startRCM["command"]=self.startRCM
+        self.startRCM.pack(fill="none")
 
         self.loadFlashCards = tk.Button(
-            text='Load flash cards', command=self.loadFlashCards).pack(fill="none")
+            text='Load flash cards(2)', command=self.loadFlashCards).pack(fill="none")
 
         self.quit = tk.Button(
-            self, text="QUIT", fg="red", command=self.master.destroy
+            self, text="QUIT(9)", fg="red", command=self.master.destroy
         )
         self.quit.pack(side="bottom")
 
-    def say_hi(self):
-        print("hi there, everyone!")
 
     def loadFlashCards(self):
         utils.clearScreen(self.master)
