@@ -15,21 +15,22 @@ class Application(tk.Frame):
         self.pack()
         self.create_widgets()
 
-        # self.master.bind('<KP_1>', lambda event: self.startRCM())
-        # self.master.bind('<KP_2>', lambda event: self.loadFlashCards())
-        # self.master.bind('<KP_9>', lambda event: self.master.destroy())
+        self.master.bind('j', lambda event: self.startRCM())
+        self.master.bind('l', lambda event: self.loadFlashCards())
+        self.master.bind('q', lambda event: self.master.destroy())
 
     def create_widgets(self):
-        self.startRCM = tk.Button(self)
-        self.startRCM["text"]='Random card mode(1)'
-        self.startRCM["command"]=self.startRCM
-        self.startRCM.pack(fill="none")
+        self.startRandomCardMode = tk.Button(self)
+        self.startRandomCardMode["text"]='Random card mode(j)'
+        self.startRandomCardMode["command"]=self.startRCM
+        self.startRandomCardMode.pack(fill="none")
 
         self.loadFlashCards = tk.Button(
-            text='Load flash cards(2)', command=self.loadFlashCards).pack(fill="none")
+            text='Load flash cards(l)', command=self.loadFlashCards)
+        self.loadFlashCards.pack()
 
         self.quit = tk.Button(
-            self, text="QUIT(9)", fg="red", command=self.master.destroy
+            self, text="QUIT(q)", fg="red", command=self.master.destroy
         )
         self.quit.pack(side="bottom")
 

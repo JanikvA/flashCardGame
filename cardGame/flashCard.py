@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import json
+import os
 
 
 class flashCard:
@@ -34,8 +35,15 @@ class flashCard:
     @classmethod
     def readFlashCardJSON(self, jsonName):
         flashCards = []
+        if not os.path.isfile(jsonName):
+            print("WARNING: {jsonfile} does not exist!".format(jsonfile=jsonName))
+            return flashCards
         with open(jsonName) as json_file:
-            data = json.load(json_file)
+            try:
+                data = json.load(json_file)
+            except json.decoder.JSONDecodeError:
+                print("WARNING: {jsonfile} can not be loaded! Wrong format?".format(jsonfile=jsonName))
+                return flashCards
             for cards in data["flashCards"]:
                 flashC = flashCard()
                 flashCards.append(flashC)
