@@ -25,9 +25,9 @@ class Application(tk.Frame):
         self.startRandomCardMode["command"] = self.startRCM
         self.startRandomCardMode.pack(fill="none")
 
-        self.loadFlashCards = tk.Button(
+        self.loadin = tk.Button(
             text='Load flash cards(l)', command=self.loadFlashCards)
-        self.loadFlashCards.pack()
+        self.loadin.pack()
 
         self.quit = tk.Button(
             self, text="QUIT(q)", fg="red", command=self.master.destroy
