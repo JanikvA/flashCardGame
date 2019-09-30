@@ -25,8 +25,13 @@ class userClass():
         self.allFlashCards += flashCard.flashCard.readFlashCardJSON(
             userClass.allUserJSONName)
 
+    def resetUserInfo(self):
+        #FIXME make a pop up open to ask if user is sure
+        print("Data for {usr} has been reseted!".format(usr=self.name))
+        self.allFlashCards=[]
+
     def writeUserInfo(self):
-        data = {"flashCards": [fc.getDictJSON()
+        data = {"flashCards": [fc.content
                                for fc in self.allFlashCards]}
         print(data)
         with open(userClass.allUserJSONName, 'w') as outfile:

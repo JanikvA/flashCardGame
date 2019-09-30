@@ -18,6 +18,8 @@ class Application(tk.Frame):
         self.master.bind('j', lambda event: self.startRCM())
         self.master.bind('l', lambda event: self.loadFlashCards())
         self.master.bind('q', lambda event: self.master.destroy())
+        self.master.bind('r', lambda event: self.user.resetUserInfo())
+        self.master.bind('m', lambda event: Application.loadMainMenu(frame=self.master, usr=self.user))
 
     def create_widgets(self):
         self.startRandomCardMode = tk.Button(self)
@@ -27,6 +29,10 @@ class Application(tk.Frame):
 
         self.loadin = tk.Button(
             text='Load flash cards(l)', command=self.loadFlashCards)
+        self.loadin.pack()
+
+        self.loadin = tk.Button(
+            text='Reset user info(r)', command=self.user.resetUserInfo)
         self.loadin.pack()
 
         self.quit = tk.Button(
@@ -41,6 +47,13 @@ class Application(tk.Frame):
     def startRCM(self):
         utils.clearScreen(self.master)
         randomCardMode.randomCardMode.load(frame=self.master, user=self.user)
+    
+    @classmethod
+    def loadMainMenu(cls, frame, usr):
+        utils.clearScreen(frame)
+        obj = Application(master=frame, user=usr)
+
+        
 
 
 def main(args):

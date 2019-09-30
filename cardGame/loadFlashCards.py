@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import tkinter as tk
 from tkinter.filedialog import askopenfilename
+import main
 
 
 class loadFlashCards(tk.Frame):
@@ -12,16 +13,22 @@ class loadFlashCards(tk.Frame):
         self.pack()
         self.create_widgets()
 
+        self.master.bind('o', lambda event: self.callback())
+
     def create_widgets(self):
         self.loadFlashCards = tk.Button(
-            text='File Open', command=self.callback).pack(fill="none")
+            text='File Open(o)', command=self.callback).pack(fill="none")
 
-        self.quit = tk.Button(self, text="QUIT", fg="red",
+        self.quit = tk.Button(self, text="QUIT(q)", fg="red",
                               command=self.master.destroy).pack(side="bottom")
+
+        self.loadMain = tk.Button(self, text="Main menu(m)", fg="blue",
+                command=lambda: main.Application.loadMainMenu(frame=self.master, usr=self.user)).pack(side="bottom")
 
     def callback(self):
         name = askopenfilename()
-        self.user.addFlashCards(name)
+        if name:
+            self.user.addFlashCards(name)
 
     @classmethod
     def load(cls, frame, user):

@@ -2,39 +2,14 @@
   "flashCards": [
 
       {
-      "front": {
-        "text": "yi1"
-      },
-      "back": {
-        "text": "one"
-      }
+      "front": "yi1",
+      "back": "one"
       },
 
       {
-      "front": {
-        "text": "中国"
-      },
-      "back": {
-        "text": "zhōng guó"
+      "front": "中国",
+      "back": "zhōng guó"
       }
-      },
 
-      {
-      "front": {
-        "text": "er2"
-      },
-      "back": {
-        "text": "two"
-      }
-      },
-
-      {
-      "front": {
-        "text": "san3"
-      },
-      "back": {
-        "text": "three"
-      }
-      }
   ]
 }

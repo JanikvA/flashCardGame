@@ -3,6 +3,7 @@
 import tkinter as tk
 import random
 import utils
+import main
 
 
 class randomCardMode(tk.Frame):
@@ -27,6 +28,9 @@ class randomCardMode(tk.Frame):
 
         self.quit = tk.Button(self, text="QUIT(q)", fg="red",
                               command=self.master.destroy).pack(side="bottom")
+
+        self.loadMain = tk.Button(self, text="Main menu(m)", fg="blue",
+                command=lambda: main.Application.loadMainMenu(frame=self.master, usr=self.user)).pack(side="bottom")
 
     #  TODO: Implement back? <29-09-19, Janik von Ahnen> # 
     def next(self):
