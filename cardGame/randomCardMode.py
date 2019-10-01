@@ -11,38 +11,38 @@ class randomCardMode(tk.Frame):
         super().__init__(master)
         self.master = master
         self.user = userName
-        self.pack()
+        self.grid()
         self.create_widgets()
         self.currentFlashCard = None
 
         self.master.bind('j', lambda event: self.next())
     def create_widgets(self):
 
-        self.cardLabel = tk.Label(self)
-        self.cardLabel.config(font=("Courier", 22))
-        self.cardLabel.pack(side="bottom", padx=10, pady=10)
-        # self.cardLabel.place(relx=0.5, rely=0.5, anchor="center")
-
-
-        self.randomCardMode=tk.Button(self)
-        self.randomCardMode["text"] = "next(j)"
-        self.randomCardMode["command"] = self.next
-        self.randomCardMode.pack(side="bottom")
-
         self.quit = tk.Button(self, text="QUIT(q)", fg="red",
-                              command=self.master.destroy).pack(side="left")
+                              command=self.master.destroy).grid()
 
         self.loadMain = tk.Button(self)
         self.loadMain["text"]="Main menu(m)",
         self.loadMain["fg"]="blue",
         self.loadMain["command"]=lambda: main.Application.loadMainMenu(frame=self.master, usr=self.user)
-        self.loadMain.pack(side="left")
+        self.loadMain.grid()
+
+        self.randomCardMode=tk.Button(self)
+        self.randomCardMode["text"] = "next(j)"
+        self.randomCardMode["command"] = self.next
+        self.randomCardMode.grid()
+
+        self.cardLabel = tk.Label(self)
+        self.cardLabel.config(font=("Courier", 22))
+        self.cardLabel.grid(row=3, column=2, pady=30)
+
+
 
     #  TODO: Implement back? <29-09-19, Janik von Ahnen> # 
     def next(self):
         self.randomCardMode["text"]="show solution (j)"
         self.randomCardMode["command"]=lambda: self.showFullCard(self.currentFlashCard)
-        for s in self.master.pack_slaves():
+        for s in self.master.grid_slaves():
             if s.__class__.__name__ == 'Label':
                 s.destroy()
         nextCard = random.choice(self.user.allFlashCards)

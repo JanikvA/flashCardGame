@@ -10,20 +10,20 @@ class loadFlashCards(tk.Frame):
         super().__init__(master)
         self.master = master
         self.user = user
-        self.pack()
+        self.grid()
         self.create_widgets()
 
         self.master.bind('o', lambda event: self.callback())
 
     def create_widgets(self):
         self.loadFlashCards = tk.Button(
-            text='File Open(o)', command=self.callback).pack(fill="none")
+            text='File Open(o)', command=self.callback).grid()
 
         self.quit = tk.Button(self, text="QUIT(q)", fg="red",
-                              command=self.master.destroy).pack(side="bottom")
+                              command=self.master.destroy).grid()
 
         self.loadMain = tk.Button(self, text="Main menu(m)", fg="blue",
-                command=lambda: main.Application.loadMainMenu(frame=self.master, usr=self.user)).pack(side="bottom")
+                command=lambda: main.Application.loadMainMenu(frame=self.master, usr=self.user)).grid()
 
     def callback(self):
         name = askopenfilename()

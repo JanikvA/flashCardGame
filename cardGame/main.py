@@ -12,7 +12,7 @@ class Application(tk.Frame):
         super().__init__(master)
         self.master = master
         self.user = user
-        self.pack()
+        self.grid()
         self.create_widgets()
 
         self.master.bind('j', lambda event: self.startRCM())
@@ -25,20 +25,20 @@ class Application(tk.Frame):
         self.startRandomCardMode = tk.Button(self)
         self.startRandomCardMode["text"] = 'Random card mode(j)'
         self.startRandomCardMode["command"] = self.startRCM
-        self.startRandomCardMode.pack(fill="none")
+        self.startRandomCardMode.grid()
 
         self.loadin = tk.Button(
             text='Load flash cards(l)', command=self.loadFlashCards)
-        self.loadin.pack()
+        self.loadin.grid()
 
         self.loadin = tk.Button(
             text='Reset user info(r)', command=self.user.resetUserInfo)
-        self.loadin.pack()
+        self.loadin.grid()
 
         self.quit = tk.Button(
             self, text="QUIT(q)", fg="red", command=self.master.destroy
         )
-        self.quit.pack(side="bottom")
+        self.quit.grid()
 
     def loadFlashCards(self):
         utils.clearScreen(self.master)
