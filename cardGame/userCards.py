@@ -33,6 +33,5 @@ class userClass():
     def writeUserInfo(self):
         data = {"flashCards": [fc.content
                                for fc in self.allFlashCards]}
-        print(data)
         with open(userClass.allUserJSONName, 'w') as outfile:
             json.dump(data, outfile)
