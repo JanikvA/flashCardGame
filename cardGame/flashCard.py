@@ -14,10 +14,14 @@ class flashCard:
     def flip(self, arg):
         pass
 
-    def fullCardContent(self):
+    def showCardContent(self,show=None, dontShow=[]):
         prettyString = ""
-        for k,v in self.content.items():
-            prettyString += str(k)+"  :  "+str(v)+"\n--------\n"
+        if show is None:
+           show=list(self.content.keys()) 
+        for k in show:
+            if k in dontShow:
+                continue
+            prettyString += str(k)+"  :  "+str(self.content[k])+"\n--------\n"
         return prettyString
 
     @classmethod

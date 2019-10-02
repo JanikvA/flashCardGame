@@ -15,7 +15,6 @@ class userClass():
 
     def __init__(self, name="user"):
         self.name = name
-        #  TODO: Make allFlashCards uniq <29-09-19, Janik von Ahnen> # 
         self.allFlashCards = []
 
     def addFlashCards(self, jsonNameFC):

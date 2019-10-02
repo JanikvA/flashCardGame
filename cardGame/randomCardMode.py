@@ -14,6 +14,7 @@ class randomCardMode(tk.Frame):
         self.grid()
         self.create_widgets()
         self.currentFlashCard = None
+        self.questionShows=["Chinese", "Pinyin"]
 
         self.master.bind('j', lambda event: self.next())
     def create_widgets(self):
@@ -47,13 +48,14 @@ class randomCardMode(tk.Frame):
                 s.destroy()
         nextCard = random.choice(self.user.allFlashCards)
         self.currentFlashCard = nextCard
-        self.cardLabel["text"]=nextCard.content[random.choice(list(nextCard.content.keys()))].__repr__()
+        # self.cardLabel["text"]=nextCard.content[random.choice(list(nextCard.content.keys()))].__repr__()
+        self.cardLabel["text"]=nextCard.showCardContent(show=self.questionShows)
         self.master.bind('j', lambda event: self.showFullCard(self.currentFlashCard))
 
     def showFullCard(self, flashCard):
         self.randomCardMode["text"]="next (j)"
         self.randomCardMode["command"]=self.next
-        self.cardLabel["text"]=flashCard.fullCardContent()
+        self.cardLabel["text"]=flashCard.showCardContent()
         self.master.bind('j', lambda event: self.next())
 
     @classmethod
