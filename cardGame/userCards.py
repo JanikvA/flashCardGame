@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import random
 import json
 import os
 import flashCard
@@ -34,3 +35,14 @@ class userClass():
                                for fc in self.allFlashCards]}
         with open(userClass.allUserJSONName, 'w') as outfile:
             json.dump(data, outfile)
+
+    def getFlashCardSubset(self, nCards=20):
+        subset=[]
+        while len(subset)<20 and len(subset)<len(self.allFlashCards):
+            randomCard=random.choice(self.allFlashCards)
+            if randomCard in subset:
+                continue
+            else:
+                subset.append()
+        return subset
+        

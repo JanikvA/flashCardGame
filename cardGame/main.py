@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import tkinter as tk
 import randomCardMode
+import choicesGame
 import loadFlashCards
 import utils
 import userCards
@@ -16,16 +17,24 @@ class Application(tk.Frame):
         self.create_widgets()
 
         self.master.bind('j', lambda event: self.startRCM())
+        self.master.bind('g', lambda event: self.startCG())
         self.master.bind('l', lambda event: self.loadFlashCards())
         self.master.bind('q', lambda event: self.master.destroy())
         self.master.bind('r', lambda event: self.user.resetUserInfo())
-        self.master.bind('m', lambda event: Application.loadMainMenu(frame=self.master, usr=self.user))
+        self.master.bind('m', lambda event: Application.loadMainMenu(
+            frame=self.master, usr=self.user))
 
     def create_widgets(self):
+
         self.startRandomCardMode = tk.Button(self)
         self.startRandomCardMode["text"] = 'Random card mode(j)'
         self.startRandomCardMode["command"] = self.startRCM
         self.startRandomCardMode.grid()
+
+        self.choicesGames = tk.Button(self)
+        self.choicesGames["text"] = 'Game with choices(g)'
+        self.choicesGames["command"] = self.startCG
+        self.choicesGames.grid()
 
         self.loadin = tk.Button(
             text='Load flash cards(l)', command=self.loadFlashCards)
@@ -47,14 +56,15 @@ class Application(tk.Frame):
     def startRCM(self):
         utils.clearScreen(self.master)
         randomCardMode.randomCardMode.load(frame=self.master, user=self.user)
-    
+
+    def startCG(self):
+        utils.clearScreen(self.master)
+        choicesGame.choicesGame.load(frame=self.master, user=self.user)
+
     @classmethod
     def loadMainMenu(cls, frame, usr):
         utils.clearScreen(frame)
         obj = Application(master=frame, user=usr)
-
-        
-
 
 def main(args):
     #  TODO: Handle user login properly <28-09-19, Janik von Ahnen> #
