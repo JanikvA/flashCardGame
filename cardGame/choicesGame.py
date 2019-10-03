@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 import tkinter as tk
 import random
-import utils
 import main
-import copy
 
 
 class choicesGame(tk.Frame):
