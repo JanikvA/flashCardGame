@@ -7,7 +7,7 @@ import os
 class flashCard:
     def __init__(self):
         self.content = {}
-        self.answerHistory="" # NOTE 0 means wrong while 1 means right answer
+        self.content["answerHistory"]=""# NOTE 0 means wrong while 1 means right answer
 
     def getContent(self, attr):
         return self.content[attr]

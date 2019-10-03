@@ -26,8 +26,8 @@ class choicesGame(tk.Frame):
                               command=self.master.destroy).grid()
 
         self.loadMain = tk.Button(self)
-        self.loadMain["text"] = "Main menu(m)",
-        self.loadMain["fg"] = "blue",
+        self.loadMain["text"] = "Main menu(m)"
+        self.loadMain["fg"] = "blue"
         self.loadMain["command"] = lambda: main.Application.loadMainMenu(
             frame=self.master, usr=self.user)
         self.loadMain.grid()
@@ -85,8 +85,8 @@ class choicesGame(tk.Frame):
 
     def correctAnswer(self, buttonPressed):
         self.answerButtons[buttonPressed].configure(bg="green")
-        self.currentFlashCard.answerHistory+="1"
-        if self.currentFlashCard.answerHistory.count("1")-self.currentFlashCard.answerHistory.count("0")==2:
+        self.currentFlashCard.content["answerHistory"]+="1"
+        if self.currentFlashCard.content["answerHistory"].count("1")-self.currentFlashCard.content["answerHistory"].count("0")==2:
             self.flashCardSubset.remove(self.currentFlashCard)
             if len(self.flashCardSubset)==0:
                 self.finishedMsg = tk.Label(self)
@@ -95,14 +95,16 @@ class choicesGame(tk.Frame):
                 self.finishedMsg.grid(row=30, column=1, pady=30)
         self.choicesG["command"] = self.next
         self.master.bind('j', lambda event: self.next())
+        self.cardLabel["text"] = self.currentFlashCard.showCardContent()
 
     def wrongAnswer(self, buttonPressed, correctButton):
         # FIXME always button 9 is displayed red. i guess this is beacuse the lambda is evaluated during runtime and k is always at the end of the loop at that point?
         # self.answerButtons[buttonPressed].configure(bg="red")
         self.answerButtons[correctButton].configure(bg="green")
-        self.currentFlashCard.answerHistory+="0"
+        self.currentFlashCard.content["answerHistory"]+="0"
         self.choicesG["command"] = self.next
         self.master.bind('j', lambda event: self.next())
+        self.cardLabel["text"] = self.currentFlashCard.showCardContent()
 
     def showFullCard(self, flashCard):
         self.choicesG["text"] = "next (j)"
@@ -111,6 +113,7 @@ class choicesGame(tk.Frame):
         self.master.bind('j', lambda event: self.next())
 
     def answerFirst(self):
+        #  TODO: Make an error msg appear to first give an answer <03-10-19, Janik von Ahnen> # 
         pass
 
     @classmethod
