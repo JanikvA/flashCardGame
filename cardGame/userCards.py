@@ -38,7 +38,7 @@ class userClass():
 
     def getFlashCardSubset(self, nCards=20):
         subset=[]
-        while len(subset)<20 and len(subset)<len(self.allFlashCards):
+        while len(subset)<nCards and len(subset)<len(self.allFlashCards):
             randomCard=random.choice(self.allFlashCards)
             if randomCard in subset:
                 continue

@@ -18,7 +18,7 @@ class choicesGame(tk.Frame):
         self.currentFlashCard = None
         self.questionShows = ["Chinese", "Pinyin"]
         self.answerShows = ["English"]
-        self.flashCardSubset = self.user.getFlashCardSubset(nCards=20)
+        self.flashCardSubset = self.user.getFlashCardSubset(nCards=10)
 
         self.master.bind('j', lambda event: self.next())
 
@@ -87,6 +87,14 @@ class choicesGame(tk.Frame):
 
     def correctAnswer(self, buttonPressed):
         self.answerButtons[buttonPressed].configure(bg="green")
+        self.currentFlashCard.answerHistory+="1"
+        if self.currentFlashCard.answerHistory.count("1")-self.currentFlashCard.answerHistory.count("0")==2:
+            self.flashCardSubset.remove(self.currentFlashCard)
+            if len(self.flashCardSubset)==0:
+                self.finishedMsg = tk.Label(self)
+                self.finishedMsg["text"]="Congratulations! You finished all flash cards :)"
+                self.finishedMsg.config(font=("helvetica", 22))
+                self.finishedMsg.grid(row=30, column=1, pady=30)
         self.choicesG["command"] = self.next
         self.master.bind('j', lambda event: self.next())
 
@@ -94,6 +102,7 @@ class choicesGame(tk.Frame):
         # FIXME always button 9 is displayed red. i guess this is beacuse the lambda is evaluated during runtime and k is always at the end of the loop at that point?
         # self.answerButtons[buttonPressed].configure(bg="red")
         self.answerButtons[correctButton].configure(bg="green")
+        self.currentFlashCard.answerHistory+="0"
         self.choicesG["command"] = self.next
         self.master.bind('j', lambda event: self.next())
 
