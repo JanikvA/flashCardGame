@@ -35,7 +35,7 @@ class randomCardMode(tk.Frame):
         self.randomCardMode.grid()
 
         self.cardLabel = tk.Label(self)
-        self.cardLabel.config(font=("Courier", 22))
+        self.cardLabel.config(font=("helvetica", 22))
         self.cardLabel.grid(row=3, column=2, pady=30)
 
 

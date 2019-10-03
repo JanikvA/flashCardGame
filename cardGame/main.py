@@ -66,6 +66,7 @@ class Application(tk.Frame):
         utils.clearScreen(frame)
         obj = Application(master=frame, user=usr)
 
+
 def main(args):
     #  TODO: Handle user login properly <28-09-19, Janik von Ahnen> #
     dummyUser = userCards.userClass(name="Janik")

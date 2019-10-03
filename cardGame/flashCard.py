@@ -22,10 +22,11 @@ class flashCard:
             if k in dontShow:
                 continue
             try:
-                prettyString += str(k)+"  :  "+str(self.content[k])+"\n--------\n"
+                prettyString += str(k)+"  :  "+str(self.content[k])+"\n"#+"\n--------\n"
             except KeyError:
                 print("WARNING: {ky} not in this flash card".format(ky=k))
                 return self.showCardContent()
+        prettyString=prettyString.strip("\n")
         return prettyString
 
     @classmethod

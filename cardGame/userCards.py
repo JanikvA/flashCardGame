@@ -43,6 +43,6 @@ class userClass():
             if randomCard in subset:
                 continue
             else:
-                subset.append()
+                subset.append(randomCard)
         return subset
         
