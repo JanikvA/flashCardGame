@@ -16,7 +16,8 @@ class choicesGame(tk.Frame):
         self.currentFlashCard = None
         self.questionShows = ["Chinese", "Pinyin"]
         self.answerShows = ["English"]
-        self.flashCardSubset = self.user.getFlashCardSubset(nCards=10)
+        self.flashCardSubset = self.user.getFlashCardSubset(nCards=20)
+        self.memSocreAtInit={flashC:flashC.calcMemoryScore() for flashC in self.flashCardSubset}
 
         self.master.bind('j', lambda event: self.next())
 
@@ -46,6 +47,7 @@ class choicesGame(tk.Frame):
         for buttonN in range(self.nButtons):
             newButton = tk.Button(self)
             newButton["text"] = "{n}".format(n=buttonN)
+            newButton.config(font=("helvetica", 15))
             # newButton["command"] = self.checkCorrect
             if buttonN % 2:
                 newButton.grid(row=4+buttonN-1, column=1, padx=5, pady=5)
@@ -86,7 +88,7 @@ class choicesGame(tk.Frame):
     def correctAnswer(self, buttonPressed):
         self.answerButtons[buttonPressed].configure(bg="green")
         self.currentFlashCard.content["answerHistory"]+="1"
-        if self.currentFlashCard.content["answerHistory"].count("1")-self.currentFlashCard.content["answerHistory"].count("0")==2:
+        if self.currentFlashCard.calcMemoryScore()-self.memSocreAtInit[self.currentFlashCard]>0:
             self.flashCardSubset.remove(self.currentFlashCard)
             if len(self.flashCardSubset)==0:
                 self.finishedMsg = tk.Label(self)
