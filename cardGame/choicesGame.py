@@ -97,7 +97,7 @@ class choicesGame(tk.Frame):
                 self.finishedMsg.grid(row=30, column=1, pady=30)
         self.choicesG["command"] = self.next
         self.master.bind('j', lambda event: self.next())
-        self.cardLabel["text"] = self.currentFlashCard.showCardContent()
+        self.cardLabel["text"] = self.currentFlashCard.showCardContent()+ "\MemoryScore: "+str(self.currentFlashCard.calcMemoryScore())
 
     def wrongAnswer(self, buttonPressed, correctButton):
         # FIXME always button 9 is displayed red. i guess this is beacuse the lambda is evaluated during runtime and k is always at the end of the loop at that point?
@@ -106,13 +106,7 @@ class choicesGame(tk.Frame):
         self.currentFlashCard.content["answerHistory"]+="0"
         self.choicesG["command"] = self.next
         self.master.bind('j', lambda event: self.next())
-        self.cardLabel["text"] = self.currentFlashCard.showCardContent()
-
-    def showFullCard(self, flashCard):
-        self.choicesG["text"] = "next (j)"
-        self.choicesG["command"] = self.next
-        self.cardLabel["text"] = flashCard.showCardContent()
-        self.master.bind('j', lambda event: self.next())
+        self.cardLabel["text"] = self.currentFlashCard.showCardContent()+ "\MemoryScore: "+str(self.currentFlashCard.calcMemoryScore())
 
     def answerFirst(self):
         #  TODO: Make an error msg appear to first give an answer <03-10-19, Janik von Ahnen> # 
