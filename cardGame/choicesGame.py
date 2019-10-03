@@ -16,7 +16,7 @@ class choicesGame(tk.Frame):
         self.currentFlashCard = None
         self.questionShows = ["Chinese", "Pinyin"]
         self.answerShows = ["English"]
-        self.flashCardSubset = self.user.getFlashCardSubset(nCards=20)
+        self.flashCardSubset = self.user.getFlashCardSubset(nCards=20, sortByMemScore=True)
         self.memSocreAtInit={flashC:flashC.calcMemoryScore() for flashC in self.flashCardSubset}
 
         self.master.bind('j', lambda event: self.next())

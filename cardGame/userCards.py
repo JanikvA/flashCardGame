@@ -36,13 +36,17 @@ class userClass():
         with open(userClass.allUserJSONName, 'w') as outfile:
             json.dump(data, outfile)
 
-    def getFlashCardSubset(self, nCards=20):
+    def getFlashCardSubset(self, nCards=20, sortByMemScore=False):
         subset=[]
-        while len(subset)<nCards and len(subset)<len(self.allFlashCards):
-            randomCard=random.choice(self.allFlashCards)
-            if randomCard in subset:
-                continue
-            else:
-                subset.append(randomCard)
+        if sortByMemScore:
+            lowestMemScore=sorted(self.allFlashCards, key=lambda fc: fc.calcMemoryScore())
+            subset=lowestMemScore[:nCards]
+        else:
+            while len(subset)<nCards and len(subset)<len(self.allFlashCards):
+                randomCard=random.choice(self.allFlashCards)
+                if randomCard in subset:
+                    continue
+                else:
+                    subset.append(randomCard)
         return subset
         
