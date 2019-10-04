@@ -24,8 +24,9 @@ class flashCard:
             if k in dontShow:
                 continue
             try:
-                prettyString += str(k)+"  :  " + \
-                    str(self.content[k])+"\n"  # +"\n--------\n"
+                prettyString += (
+                    str(k) + "  :  " + str(self.content[k]) + "\n"
+                )  # +"\n--------\n"
             except KeyError:
                 print("WARNING: {ky} not in this flash card".format(ky=k))
                 return self.showCardContent()
@@ -38,7 +39,8 @@ class flashCard:
         return memScore
 
     def fancyMemoryScore(self):
-        #  TODO: Do this more fancy. Maybe with timestamps? <03-10-19, Janik von Ahnen> #
+        # TODO: Do this more fancy. Maybe with timestamps? <03-10-19, Janik von
+        # Ahnen> #
         memScore = 0
         for i, c in enumerate(self.content["answerHistory"][-10:], start=1):
             if c == "1":
@@ -53,15 +55,19 @@ class flashCard:
     def readFlashCardJSON(self, jsonName):
         flashCards = []
         if not os.path.isfile(jsonName):
-            print("WARNING: {jsonfile} does not exist!".format(
-                jsonfile=jsonName))
+            print(
+                "WARNING: {jsonfile} does not exist!".format(jsonfile=jsonName)
+            )
             return flashCards
         with open(jsonName) as json_file:
             try:
                 data = json.load(json_file)
             except json.decoder.JSONDecodeError:
-                print("WARNING: {jsonfile} can not be loaded! Wrong format?".format(
-                    jsonfile=jsonName))
+                print(
+                    "WARNING: {jsonfile} can not be loaded! Wrong format?".format(
+                        jsonfile=jsonName
+                    )
+                )
                 return flashCards
             for cards in data["flashCards"]:
                 flashC = flashCard()

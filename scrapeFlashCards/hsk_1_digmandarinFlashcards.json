@@ -1,1 +1,769 @@
-{"flashCards": [{"Chinese": "\u6211", "Pinyin": "w\u01d2", "English": "I, me"}, {"Chinese": "\u6211\u4eec", "Pinyin": "w\u01d2men", "English": "we, us (pl.)"}, {"Chinese": "\u4f60", "Pinyin": "n\u01d0", "English": "you"}, {"Chinese": "\u4f60\u4eec", "Pinyin": "n\u01d0men", "English": "you (pl.)"}, {"Chinese": "\u4ed6", "Pinyin": "t\u0101", "English": "he, him"}, {"Chinese": "\u5979", "Pinyin": "t\u0101", "English": "she, her"}, {"Chinese": "\u4ed6\u4eec", "Pinyin": "t\u0101men", "English": "they (male+female / male, pl.)"}, {"Chinese": "\u5979\u4eec", "Pinyin": "t\u0101men", "English": "they (females, pl.)"}, {"Chinese": "\u8fd9 (\u8fd9\u513f)", "Pinyin": "zh\u00e8 ( zh\u00e8r)", "English": "here, this"}, {"Chinese": "\u90a3 (\u90a3\u513f)", "Pinyin": "n\u00e0 (n\u00e0r)", "English": "there, that"}, {"Chinese": "\u54ea\uff08\u54ea\u513f\uff09", "Pinyin": "n\u01ce (n\u01cer)", "English": "where"}, {"Chinese": "\u8c01", "Pinyin": "shu\u00ed", "English": "who"}, {"Chinese": "\u4ec0\u4e48", "Pinyin": "sh\u00e9n me", "English": "what, why"}, {"Chinese": "\u591a\u5c11", "Pinyin": "du\u014dsh\u01ceo", "English": "how many, how much"}, {"Chinese": "\u51e0", "Pinyin": "j\u01d0", "English": "a few, how many"}, {"Chinese": "\u600e\u4e48", "Pinyin": "z\u011bnme", "English": "how"}, {"Chinese": "\u600e\u4e48\u6837", "Pinyin": "z\u011bnmey\u00e0ng", "English": "how about"}, {"Chinese": "\u4e00", "Pinyin": "y\u012b", "English": "one"}, {"Chinese": "\u4e8c", "Pinyin": "\u00e8r", "English": "two"}, {"Chinese": "\u4e09", "Pinyin": "s\u0101n", "English": "three"}, {"Chinese": "\u56db", "Pinyin": "s\u00ec", "English": "four"}, {"Chinese": "\u4e94", "Pinyin": "w\u01d4", "English": "five"}, {"Chinese": "\u516d", "Pinyin": "li\u00f9", "English": "six"}, {"Chinese": "\u4e03", "Pinyin": "q\u012b", "English": "seven"}, {"Chinese": "\u516b", "Pinyin": "b\u0101", "English": "eight"}, {"Chinese": "\u4e5d", "Pinyin": "ji\u01d4", "English": "nine"}, {"Chinese": "\u5341", "Pinyin": "sh\u00ed", "English": "ten"}, {"Chinese": "\u96f6", "Pinyin": "l\u00edng", "English": "zero"}, {"Chinese": "\u4e2a", "Pinyin": "g\u00e8", "English": "one, a, an"}, {"Chinese": "\u5c81", "Pinyin": "su\u00ec", "English": "year"}, {"Chinese": "\u672c", "Pinyin": "b\u011bn", "English": "volume"}, {"Chinese": "\u4e9b", "Pinyin": "xi\u0113", "English": "some"}, {"Chinese": "\u5757", "Pinyin": "ku\u00e0i", "English": "piece"}, {"Chinese": "\u4e0d", "Pinyin": "b\u00f9", "English": "no"}, {"Chinese": "\u6ca1", "Pinyin": "m\u00e9i", "English": "no"}, {"Chinese": "\u5f88", "Pinyin": "h\u011bn", "English": "quite, very"}, {"Chinese": "\u592a", "Pinyin": "t\u00e0i", "English": "too"}, {"Chinese": "\u90fd", "Pinyin": "d\u014du", "English": "all"}, {"Chinese": "\u548c", "Pinyin": "h\u00e9", "English": "and"}, {"Chinese": "\u5728", "Pinyin": "z\u00e0i", "English": "in, at"}, {"Chinese": "\u7684", "Pinyin": "de", "English": ""}, {"Chinese": "\u4e86", "Pinyin": "le", "English": ""}, {"Chinese": "\u5417", "Pinyin": "ma", "English": ""}, {"Chinese": "\u5462", "Pinyin": "ne", "English": ""}, {"Chinese": "\u5582", "Pinyin": "w\u00e8i", "English": "hello"}, {"Chinese": "\u5bb6", "Pinyin": "ji\u0101", "English": "home"}, {"Chinese": "\u5b66\u6821", "Pinyin": "xu\u00e9xi\u00e0o", "English": "school"}, {"Chinese": "\u996d\u5e97", "Pinyin": "f\u00e0ndi\u00e0n", "English": "restaurant"}, {"Chinese": "\u5546\u5e97", "Pinyin": "sh\u0101ngdi\u00e0n", "English": "store"}, {"Chinese": "\u533b\u9662", "Pinyin": "y\u012byu\u00e0n", "English": "hospital"}, {"Chinese": "\u706b\u8f66\u7ad9", "Pinyin": "hu\u01d2ch\u0113zh\u00e0n", "English": "train station"}, {"Chinese": "\u4e2d\u56fd", "Pinyin": "zh\u014dng gu\u00f3", "English": "China"}, {"Chinese": "\u5317\u4eac", "Pinyin": "b\u011bij\u012bng", "English": "Beijing"}, {"Chinese": "\u4e0a", "Pinyin": "sh\u00e0ng", "English": "up"}, {"Chinese": "\u4e0b", "Pinyin": "xi\u00e0", "English": "down"}, {"Chinese": "\u524d\u9762", "Pinyin": "qi\u00e1nmi\u00e0n", "English": "front"}, {"Chinese": "\u540e\u9762", "Pinyin": "h\u00f2umi\u00e0n", "English": "behind"}, {"Chinese": "\u91cc", "Pinyin": "l\u01d0mi\u00e0n", "English": "inside"}, {"Chinese": "\u4eca\u5929", "Pinyin": "j\u012bnti\u0101n", "English": "today"}, {"Chinese": "\u660e\u5929", "Pinyin": "m\u00edngti\u0101n", "English": "tomorrow"}, {"Chinese": "\u6628\u5929", "Pinyin": "zu\u00f3ti\u0101n", "English": "yesterday"}, {"Chinese": "\u4e0a\u5348", "Pinyin": "sh\u00e0ngw\u01d4", "English": "morning"}, {"Chinese": "\u4e2d\u5348", "Pinyin": "zh\u014dngw\u01d4", "English": "noon"}, {"Chinese": "\u4e0b\u5348", "Pinyin": "xi\u00e0w\u01d4", "English": "afternoon"}, {"Chinese": "\u5e74", "Pinyin": "ni\u00e1n", "English": "year"}, {"Chinese": "\u6708", "Pinyin": "yu\u00e8", "English": "month"}, {"Chinese": "\u65e5", "Pinyin": "r\u00ec", "English": "day"}, {"Chinese": "\u661f\u671f", "Pinyin": "x\u012bngq\u012b", "English": "week"}, {"Chinese": "\u70b9", "Pinyin": "di\u01cen", "English": "dot, spot"}, {"Chinese": "\u5206\u949f", "Pinyin": "f\u0113nzh\u014dng", "English": "minute"}, {"Chinese": "\u73b0\u5728", "Pinyin": "xi\u00e0nz\u00e0i", "English": "now"}, {"Chinese": "\u65f6\u5019", "Pinyin": "sh\u00edhou", "English": "time"}, {"Chinese": "\u7238\u7238", "Pinyin": "b\u00e0ba", "English": "father"}, {"Chinese": "\u5988\u5988", "Pinyin": "m\u0101ma", "English": "mother"}, {"Chinese": "\u513f\u5b50", "Pinyin": "\u00e9rzi", "English": "son"}, {"Chinese": "\u5973\u513f", "Pinyin": "n\u01da\u00e9r", "English": "daughter"}, {"Chinese": "\u8001\u5e08", "Pinyin": "l\u01ceosh\u012b", "English": "teacher"}, {"Chinese": "\u5b66\u751f", "Pinyin": "xu\u00e9sh\u0113ng", "English": "student"}, {"Chinese": "\u540c\u5b66", "Pinyin": "t\u00f3ngxu\u00e9", "English": "shoolmate"}, {"Chinese": "\u670b\u53cb", "Pinyin": "p\u00e9ngyou", "English": "friend"}, {"Chinese": "\u533b\u751f", "Pinyin": "y\u012bsh\u0113ng", "English": "doctor"}, {"Chinese": "\u5148\u751f", "Pinyin": "xi\u0101nsheng", "English": "sir"}, {"Chinese": "\u5c0f\u59d0", "Pinyin": "xi\u01ceoji\u011b", "English": "Miss"}, {"Chinese": "\u8863\u670d", "Pinyin": "y\u012bfu", "English": "cloth"}, {"Chinese": "\u6c34", "Pinyin": "shu\u01d0", "English": "water"}, {"Chinese": "\u83dc", "Pinyin": "c\u00e0i", "English": "vegetable"}, {"Chinese": "\u7c73\u996d", "Pinyin": "m\u01d0f\u00e0n", "English": "rice"}, {"Chinese": "\u6c34\u679c", "Pinyin": "shu\u01d0gu\u01d2", "English": "fruit"}, {"Chinese": "\u82f9\u679c", "Pinyin": "p\u00ednggu\u01d2", "English": "apple"}, {"Chinese": "\u8336", "Pinyin": "ch\u00e1", "English": "tea"}, {"Chinese": "\u676f\u5b50", "Pinyin": "b\u0113izi", "English": "cup"}, {"Chinese": "\u94b1", "Pinyin": "qi\u00e1n", "English": "money"}, {"Chinese": "\u98de\u673a", "Pinyin": "f\u0113ij\u012b", "English": "airplane"}, {"Chinese": "\u51fa\u79df\u8f66", "Pinyin": "ch\u016bz\u016bch\u0113", "English": "taxi"}, {"Chinese": "\u7535\u89c6", "Pinyin": "di\u00e0nsh\u00ec", "English": "television"}, {"Chinese": "\u7535\u8111", "Pinyin": "di\u00e0nn\u01ceo", "English": "computer"}, {"Chinese": "\u7535\u5f71", "Pinyin": "di\u00e0ny\u01d0ng", "English": "movie"}, {"Chinese": "\u5929\u6c14", "Pinyin": "ti\u0101nq\u00ec", "English": "weather"}, {"Chinese": "\u732b", "Pinyin": "m\u0101o", "English": "cat"}, {"Chinese": "\u72d7", "Pinyin": "g\u01d2u", "English": "dog"}, {"Chinese": "\u4e1c\u897f", "Pinyin": "d\u014dngxi", "English": "thing"}, {"Chinese": "\u4eba", "Pinyin": "r\u00e9n", "English": "person"}, {"Chinese": "\u540d\u5b57", "Pinyin": "m\u00edngzi", "English": "name"}, {"Chinese": "\u4e66", "Pinyin": "sh\u016b", "English": "book"}, {"Chinese": "\u6c49\u8bed", "Pinyin": "h\u00e0ny\u01d4", "English": "mandarin Chinese"}, {"Chinese": "\u5b57", "Pinyin": "z\u00ec", "English": "character"}, {"Chinese": "\u684c\u5b50", "Pinyin": "zhu\u014dzi", "English": "desk"}, {"Chinese": "\u6905\u5b50", "Pinyin": "y\u01d0zi", "English": "chair"}, {"Chinese": "\u8c22\u8c22", "Pinyin": "xi\u00e8xie", "English": "thank"}, {"Chinese": "\u4e0d\u5ba2\u6c14", "Pinyin": "b\u00fak\u00e8q\u00ec", "English": "you are welcome"}, {"Chinese": "\u518d\u89c1", "Pinyin": "z\u00e0iji\u00e0n", "English": "good-bye"}, {"Chinese": "\u8bf7", "Pinyin": "q\u01d0ng", "English": "please"}, {"Chinese": "\u5bf9\u4e0d\u8d77", "Pinyin": "du\u00ecb\u00f9q\u01d0", "English": "sorry"}, {"Chinese": "\u6ca1\u5173\u7cfb", "Pinyin": "m\u00e9igu\u0101nx\u00ec", "English": "It doesn\u2019t matter"}, {"Chinese": "\u662f", "Pinyin": "sh\u00ec", "English": "be (am, is, are)"}, {"Chinese": "\u6709", "Pinyin": "y\u01d2u", "English": "have"}, {"Chinese": "\u770b", "Pinyin": "k\u00e0n", "English": "look"}, {"Chinese": "\u542c", "Pinyin": "t\u012bng", "English": "listen"}, {"Chinese": "\u8bf4\u8bdd", "Pinyin": "shu\u014dhu\u00e0", "English": "speak"}, {"Chinese": "\u8bfb", "Pinyin": "d\u00fa", "English": "read"}, {"Chinese": "\u5199", "Pinyin": "xi\u011b", "English": "write"}, {"Chinese": "\u770b\u89c1", "Pinyin": "k\u00e0nji\u00e0n", "English": "see"}, {"Chinese": "\u53eb", "Pinyin": "ji\u00e0o", "English": "call"}, {"Chinese": "\u6765", "Pinyin": "l\u00e1i", "English": "come"}, {"Chinese": "\u56de", "Pinyin": "hu\u00ed", "English": "return"}, {"Chinese": "\u53bb", "Pinyin": "q\u00f9", "English": "go"}, {"Chinese": "\u5403", "Pinyin": "ch\u012b", "English": "eat"}, {"Chinese": "\u559d", "Pinyin": "h\u0113", "English": "drink"}, {"Chinese": "\u7761\u89c9", "Pinyin": "shu\u00ecji\u00e0o", "English": "sleep"}, {"Chinese": "\u6253\u7535\u8bdd", "Pinyin": "d\u01cedi\u00e0nhu\u00e0", "English": "call up"}, {"Chinese": "\u505a", "Pinyin": "zu\u00f2", "English": "do"}, {"Chinese": "\u4e70", "Pinyin": "m\u01cei", "English": "buy"}, {"Chinese": "\u5f00", "Pinyin": "k\u0101i", "English": "open"}, {"Chinese": "\u5750", "Pinyin": "zu\u00f2", "English": "sit"}, {"Chinese": "\u4f4f", "Pinyin": "zh\u00f9", "English": "live"}, {"Chinese": "\u5b66\u4e60", "Pinyin": "xu\u00e9x\u00ed", "English": "study"}, {"Chinese": "\u5de5\u4f5c", "Pinyin": "g\u014dngzu\u00f2", "English": "work"}, {"Chinese": "\u4e0b\u96e8", "Pinyin": "xi\u00e0y\u01d4", "English": "rain"}, {"Chinese": "\u7231", "Pinyin": "\u00e0i", "English": "love"}, {"Chinese": "\u559c\u6b22", "Pinyin": "x\u01d0hu\u0101n", "English": "love, like"}, {"Chinese": "\u60f3", "Pinyin": "xi\u01ceng", "English": "want"}, {"Chinese": "\u8ba4\u8bc6", "Pinyin": "r\u00e8nshi", "English": "know"}, {"Chinese": "\u4f1a", "Pinyin": "hu\u00ec", "English": "can"}, {"Chinese": "\u80fd", "Pinyin": "n\u00e9ng", "English": "can, be able to"}, {"Chinese": "\u597d", "Pinyin": "h\u01ceo", "English": "good"}, {"Chinese": "\u5927", "Pinyin": "d\u00e0", "English": "big"}, {"Chinese": "\u5c0f", "Pinyin": "xi\u01ceo", "English": "small"}, {"Chinese": "\u591a", "Pinyin": "du\u014d", "English": "many, much"}, {"Chinese": "\u5c11", "Pinyin": "sh\u01ceo", "English": "few, little"}, {"Chinese": "\u51b7", "Pinyin": "l\u011bng", "English": "cold"}, {"Chinese": "\u70ed", "Pinyin": "r\u00e8", "English": "hot"}, {"Chinese": "\u9ad8\u5174", "Pinyin": "g\u0101ox\u00ecng", "English": "happy"}, {"Chinese": "\u6f02\u4eae", "Pinyin": "pi\u00e0oli\u00e0ng", "English": "beautiful"}]}
+{
+  "flashCards": [
+    {
+      "Chinese": "我",
+      "Pinyin": "wǒ",
+      "English": "I, me"
+    },
+    {
+      "Chinese": "我们",
+      "Pinyin": "wǒmen",
+      "English": "we, us (pl.)"
+    },
+    {
+      "Chinese": "你",
+      "Pinyin": "nǐ",
+      "English": "you"
+    },
+    {
+      "Chinese": "你们",
+      "Pinyin": "nǐmen",
+      "English": "you (pl.)"
+    },
+    {
+      "Chinese": "他",
+      "Pinyin": "tā",
+      "English": "he, him"
+    },
+    {
+      "Chinese": "她",
+      "Pinyin": "tā",
+      "English": "she, her"
+    },
+    {
+      "Chinese": "他们",
+      "Pinyin": "tāmen",
+      "English": "they (male+female / male, pl.)"
+    },
+    {
+      "Chinese": "她们",
+      "Pinyin": "tāmen",
+      "English": "they (females, pl.)"
+    },
+    {
+      "Chinese": "这 (这儿)",
+      "Pinyin": "zhè ( zhèr)",
+      "English": "here, this"
+    },
+    {
+      "Chinese": "那 (那儿)",
+      "Pinyin": "nà (nàr)",
+      "English": "there, that"
+    },
+    {
+      "Chinese": "哪（哪儿）",
+      "Pinyin": "nǎ (nǎr)",
+      "English": "where"
+    },
+    {
+      "Chinese": "谁",
+      "Pinyin": "shuí",
+      "English": "who"
+    },
+    {
+      "Chinese": "什么",
+      "Pinyin": "shén me",
+      "English": "what, why"
+    },
+    {
+      "Chinese": "多少",
+      "Pinyin": "duōshǎo",
+      "English": "how many, how much"
+    },
+    {
+      "Chinese": "几",
+      "Pinyin": "jǐ",
+      "English": "a few, how many"
+    },
+    {
+      "Chinese": "怎么",
+      "Pinyin": "zěnme",
+      "English": "how"
+    },
+    {
+      "Chinese": "怎么样",
+      "Pinyin": "zěnmeyàng",
+      "English": "how about"
+    },
+    {
+      "Chinese": "一",
+      "Pinyin": "yī",
+      "English": "one"
+    },
+    {
+      "Chinese": "二",
+      "Pinyin": "èr",
+      "English": "two"
+    },
+    {
+      "Chinese": "三",
+      "Pinyin": "sān",
+      "English": "three"
+    },
+    {
+      "Chinese": "四",
+      "Pinyin": "sì",
+      "English": "four"
+    },
+    {
+      "Chinese": "五",
+      "Pinyin": "wǔ",
+      "English": "five"
+    },
+    {
+      "Chinese": "六",
+      "Pinyin": "liù",
+      "English": "six"
+    },
+    {
+      "Chinese": "七",
+      "Pinyin": "qī",
+      "English": "seven"
+    },
+    {
+      "Chinese": "八",
+      "Pinyin": "bā",
+      "English": "eight"
+    },
+    {
+      "Chinese": "九",
+      "Pinyin": "jiǔ",
+      "English": "nine"
+    },
+    {
+      "Chinese": "十",
+      "Pinyin": "shí",
+      "English": "ten"
+    },
+    {
+      "Chinese": "零",
+      "Pinyin": "líng",
+      "English": "zero"
+    },
+    {
+      "Chinese": "个",
+      "Pinyin": "gè",
+      "English": "one, a, an"
+    },
+    {
+      "Chinese": "岁",
+      "Pinyin": "suì",
+      "English": "year"
+    },
+    {
+      "Chinese": "本",
+      "Pinyin": "běn",
+      "English": "volume"
+    },
+    {
+      "Chinese": "些",
+      "Pinyin": "xiē",
+      "English": "some"
+    },
+    {
+      "Chinese": "块",
+      "Pinyin": "kuài",
+      "English": "piece"
+    },
+    {
+      "Chinese": "不",
+      "Pinyin": "bù",
+      "English": "no"
+    },
+    {
+      "Chinese": "没",
+      "Pinyin": "méi",
+      "English": "no"
+    },
+    {
+      "Chinese": "很",
+      "Pinyin": "hěn",
+      "English": "quite, very"
+    },
+    {
+      "Chinese": "太",
+      "Pinyin": "tài",
+      "English": "too"
+    },
+    {
+      "Chinese": "都",
+      "Pinyin": "dōu",
+      "English": "all"
+    },
+    {
+      "Chinese": "和",
+      "Pinyin": "hé",
+      "English": "and"
+    },
+    {
+      "Chinese": "在",
+      "Pinyin": "zài",
+      "English": "in, at"
+    },
+    {
+      "Chinese": "的",
+      "Pinyin": "de",
+      "English": ""
+    },
+    {
+      "Chinese": "了",
+      "Pinyin": "le",
+      "English": ""
+    },
+    {
+      "Chinese": "吗",
+      "Pinyin": "ma",
+      "English": ""
+    },
+    {
+      "Chinese": "呢",
+      "Pinyin": "ne",
+      "English": ""
+    },
+    {
+      "Chinese": "喂",
+      "Pinyin": "wèi",
+      "English": "hello"
+    },
+    {
+      "Chinese": "家",
+      "Pinyin": "jiā",
+      "English": "home"
+    },
+    {
+      "Chinese": "学校",
+      "Pinyin": "xuéxiào",
+      "English": "school"
+    },
+    {
+      "Chinese": "饭店",
+      "Pinyin": "fàndiàn",
+      "English": "restaurant"
+    },
+    {
+      "Chinese": "商店",
+      "Pinyin": "shāngdiàn",
+      "English": "store"
+    },
+    {
+      "Chinese": "医院",
+      "Pinyin": "yīyuàn",
+      "English": "hospital"
+    },
+    {
+      "Chinese": "火车站",
+      "Pinyin": "huǒchēzhàn",
+      "English": "train station"
+    },
+    {
+      "Chinese": "中国",
+      "Pinyin": "zhōng guó",
+      "English": "China"
+    },
+    {
+      "Chinese": "北京",
+      "Pinyin": "běijīng",
+      "English": "Beijing"
+    },
+    {
+      "Chinese": "上",
+      "Pinyin": "shàng",
+      "English": "up"
+    },
+    {
+      "Chinese": "下",
+      "Pinyin": "xià",
+      "English": "down"
+    },
+    {
+      "Chinese": "前面",
+      "Pinyin": "qiánmiàn",
+      "English": "front"
+    },
+    {
+      "Chinese": "后面",
+      "Pinyin": "hòumiàn",
+      "English": "behind"
+    },
+    {
+      "Chinese": "里",
+      "Pinyin": "lǐmiàn",
+      "English": "inside"
+    },
+    {
+      "Chinese": "今天",
+      "Pinyin": "jīntiān",
+      "English": "today"
+    },
+    {
+      "Chinese": "明天",
+      "Pinyin": "míngtiān",
+      "English": "tomorrow"
+    },
+    {
+      "Chinese": "昨天",
+      "Pinyin": "zuótiān",
+      "English": "yesterday"
+    },
+    {
+      "Chinese": "上午",
+      "Pinyin": "shàngwǔ",
+      "English": "morning"
+    },
+    {
+      "Chinese": "中午",
+      "Pinyin": "zhōngwǔ",
+      "English": "noon"
+    },
+    {
+      "Chinese": "下午",
+      "Pinyin": "xiàwǔ",
+      "English": "afternoon"
+    },
+    {
+      "Chinese": "年",
+      "Pinyin": "nián",
+      "English": "year"
+    },
+    {
+      "Chinese": "月",
+      "Pinyin": "yuè",
+      "English": "month"
+    },
+    {
+      "Chinese": "日",
+      "Pinyin": "rì",
+      "English": "day"
+    },
+    {
+      "Chinese": "星期",
+      "Pinyin": "xīngqī",
+      "English": "week"
+    },
+    {
+      "Chinese": "点",
+      "Pinyin": "diǎn",
+      "English": "dot, spot"
+    },
+    {
+      "Chinese": "分钟",
+      "Pinyin": "fēnzhōng",
+      "English": "minute"
+    },
+    {
+      "Chinese": "现在",
+      "Pinyin": "xiànzài",
+      "English": "now"
+    },
+    {
+      "Chinese": "时候",
+      "Pinyin": "shíhou",
+      "English": "time"
+    },
+    {
+      "Chinese": "爸爸",
+      "Pinyin": "bàba",
+      "English": "father"
+    },
+    {
+      "Chinese": "妈妈",
+      "Pinyin": "māma",
+      "English": "mother"
+    },
+    {
+      "Chinese": "儿子",
+      "Pinyin": "érzi",
+      "English": "son"
+    },
+    {
+      "Chinese": "女儿",
+      "Pinyin": "nǚér",
+      "English": "daughter"
+    },
+    {
+      "Chinese": "老师",
+      "Pinyin": "lǎoshī",
+      "English": "teacher"
+    },
+    {
+      "Chinese": "学生",
+      "Pinyin": "xuéshēng",
+      "English": "student"
+    },
+    {
+      "Chinese": "同学",
+      "Pinyin": "tóngxué",
+      "English": "shoolmate"
+    },
+    {
+      "Chinese": "朋友",
+      "Pinyin": "péngyou",
+      "English": "friend"
+    },
+    {
+      "Chinese": "医生",
+      "Pinyin": "yīshēng",
+      "English": "doctor"
+    },
+    {
+      "Chinese": "先生",
+      "Pinyin": "xiānsheng",
+      "English": "sir"
+    },
+    {
+      "Chinese": "小姐",
+      "Pinyin": "xiǎojiě",
+      "English": "Miss"
+    },
+    {
+      "Chinese": "衣服",
+      "Pinyin": "yīfu",
+      "English": "cloth"
+    },
+    {
+      "Chinese": "水",
+      "Pinyin": "shuǐ",
+      "English": "water"
+    },
+    {
+      "Chinese": "菜",
+      "Pinyin": "cài",
+      "English": "vegetable"
+    },
+    {
+      "Chinese": "米饭",
+      "Pinyin": "mǐfàn",
+      "English": "rice"
+    },
+    {
+      "Chinese": "水果",
+      "Pinyin": "shuǐguǒ",
+      "English": "fruit"
+    },
+    {
+      "Chinese": "苹果",
+      "Pinyin": "píngguǒ",
+      "English": "apple"
+    },
+    {
+      "Chinese": "茶",
+      "Pinyin": "chá",
+      "English": "tea"
+    },
+    {
+      "Chinese": "杯子",
+      "Pinyin": "bēizi",
+      "English": "cup"
+    },
+    {
+      "Chinese": "钱",
+      "Pinyin": "qián",
+      "English": "money"
+    },
+    {
+      "Chinese": "飞机",
+      "Pinyin": "fēijī",
+      "English": "airplane"
+    },
+    {
+      "Chinese": "出租车",
+      "Pinyin": "chūzūchē",
+      "English": "taxi"
+    },
+    {
+      "Chinese": "电视",
+      "Pinyin": "diànshì",
+      "English": "television"
+    },
+    {
+      "Chinese": "电脑",
+      "Pinyin": "diànnǎo",
+      "English": "computer"
+    },
+    {
+      "Chinese": "电影",
+      "Pinyin": "diànyǐng",
+      "English": "movie"
+    },
+    {
+      "Chinese": "天气",
+      "Pinyin": "tiānqì",
+      "English": "weather"
+    },
+    {
+      "Chinese": "猫",
+      "Pinyin": "māo",
+      "English": "cat"
+    },
+    {
+      "Chinese": "狗",
+      "Pinyin": "gǒu",
+      "English": "dog"
+    },
+    {
+      "Chinese": "东西",
+      "Pinyin": "dōngxi",
+      "English": "thing"
+    },
+    {
+      "Chinese": "人",
+      "Pinyin": "rén",
+      "English": "person"
+    },
+    {
+      "Chinese": "名字",
+      "Pinyin": "míngzi",
+      "English": "name"
+    },
+    {
+      "Chinese": "书",
+      "Pinyin": "shū",
+      "English": "book"
+    },
+    {
+      "Chinese": "汉语",
+      "Pinyin": "hànyǔ",
+      "English": "mandarin Chinese"
+    },
+    {
+      "Chinese": "字",
+      "Pinyin": "zì",
+      "English": "character"
+    },
+    {
+      "Chinese": "桌子",
+      "Pinyin": "zhuōzi",
+      "English": "desk"
+    },
+    {
+      "Chinese": "椅子",
+      "Pinyin": "yǐzi",
+      "English": "chair"
+    },
+    {
+      "Chinese": "谢谢",
+      "Pinyin": "xièxie",
+      "English": "thank"
+    },
+    {
+      "Chinese": "不客气",
+      "Pinyin": "búkèqì",
+      "English": "you are welcome"
+    },
+    {
+      "Chinese": "再见",
+      "Pinyin": "zàijiàn",
+      "English": "good-bye"
+    },
+    {
+      "Chinese": "请",
+      "Pinyin": "qǐng",
+      "English": "please"
+    },
+    {
+      "Chinese": "对不起",
+      "Pinyin": "duìbùqǐ",
+      "English": "sorry"
+    },
+    {
+      "Chinese": "没关系",
+      "Pinyin": "méiguānxì",
+      "English": "It doesn’t matter"
+    },
+    {
+      "Chinese": "是",
+      "Pinyin": "shì",
+      "English": "be (am, is, are)"
+    },
+    {
+      "Chinese": "有",
+      "Pinyin": "yǒu",
+      "English": "have"
+    },
+    {
+      "Chinese": "看",
+      "Pinyin": "kàn",
+      "English": "look"
+    },
+    {
+      "Chinese": "听",
+      "Pinyin": "tīng",
+      "English": "listen"
+    },
+    {
+      "Chinese": "说话",
+      "Pinyin": "shuōhuà",
+      "English": "speak"
+    },
+    {
+      "Chinese": "读",
+      "Pinyin": "dú",
+      "English": "read"
+    },
+    {
+      "Chinese": "写",
+      "Pinyin": "xiě",
+      "English": "write"
+    },
+    {
+      "Chinese": "看见",
+      "Pinyin": "kànjiàn",
+      "English": "see"
+    },
+    {
+      "Chinese": "叫",
+      "Pinyin": "jiào",
+      "English": "call"
+    },
+    {
+      "Chinese": "来",
+      "Pinyin": "lái",
+      "English": "come"
+    },
+    {
+      "Chinese": "回",
+      "Pinyin": "huí",
+      "English": "return"
+    },
+    {
+      "Chinese": "去",
+      "Pinyin": "qù",
+      "English": "go"
+    },
+    {
+      "Chinese": "吃",
+      "Pinyin": "chī",
+      "English": "eat"
+    },
+    {
+      "Chinese": "喝",
+      "Pinyin": "hē",
+      "English": "drink"
+    },
+    {
+      "Chinese": "睡觉",
+      "Pinyin": "shuìjiào",
+      "English": "sleep"
+    },
+    {
+      "Chinese": "打电话",
+      "Pinyin": "dǎdiànhuà",
+      "English": "call up"
+    },
+    {
+      "Chinese": "做",
+      "Pinyin": "zuò",
+      "English": "do"
+    },
+    {
+      "Chinese": "买",
+      "Pinyin": "mǎi",
+      "English": "buy"
+    },
+    {
+      "Chinese": "开",
+      "Pinyin": "kāi",
+      "English": "open"
+    },
+    {
+      "Chinese": "坐",
+      "Pinyin": "zuò",
+      "English": "sit"
+    },
+    {
+      "Chinese": "住",
+      "Pinyin": "zhù",
+      "English": "live"
+    },
+    {
+      "Chinese": "学习",
+      "Pinyin": "xuéxí",
+      "English": "study"
+    },
+    {
+      "Chinese": "工作",
+      "Pinyin": "gōngzuò",
+      "English": "work"
+    },
+    {
+      "Chinese": "下雨",
+      "Pinyin": "xiàyǔ",
+      "English": "rain"
+    },
+    {
+      "Chinese": "爱",
+      "Pinyin": "ài",
+      "English": "love"
+    },
+    {
+      "Chinese": "喜欢",
+      "Pinyin": "xǐhuān",
+      "English": "love, like"
+    },
+    {
+      "Chinese": "想",
+      "Pinyin": "xiǎng",
+      "English": "want"
+    },
+    {
+      "Chinese": "认识",
+      "Pinyin": "rènshi",
+      "English": "know"
+    },
+    {
+      "Chinese": "会",
+      "Pinyin": "huì",
+      "English": "can"
+    },
+    {
+      "Chinese": "能",
+      "Pinyin": "néng",
+      "English": "can, be able to"
+    },
+    {
+      "Chinese": "好",
+      "Pinyin": "hǎo",
+      "English": "good"
+    },
+    {
+      "Chinese": "大",
+      "Pinyin": "dà",
+      "English": "big"
+    },
+    {
+      "Chinese": "小",
+      "Pinyin": "xiǎo",
+      "English": "small"
+    },
+    {
+      "Chinese": "多",
+      "Pinyin": "duō",
+      "English": "many, much"
+    },
+    {
+      "Chinese": "少",
+      "Pinyin": "shǎo",
+      "English": "few, little"
+    },
+    {
+      "Chinese": "冷",
+      "Pinyin": "lěng",
+      "English": "cold"
+    },
+    {
+      "Chinese": "热",
+      "Pinyin": "rè",
+      "English": "hot"
+    },
+    {
+      "Chinese": "高兴",
+      "Pinyin": "gāoxìng",
+      "English": "happy"
+    },
+    {
+      "Chinese": "漂亮",
+      "Pinyin": "piàoliàng",
+      "English": "beautiful"
+    }
+  ]
+}

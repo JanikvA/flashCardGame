@@ -16,32 +16,38 @@ class Application(tk.Frame):
         self.grid()
         self.create_widgets()
 
-        self.master.bind('j', lambda event: self.startRCM())
-        self.master.bind('g', lambda event: self.startCG())
-        self.master.bind('l', lambda event: self.loadFlashCards())
-        self.master.bind('q', lambda event: self.master.destroy())
-        self.master.bind('r', lambda event: self.user.resetUserInfo())
-        self.master.bind('m', lambda event: Application.loadMainMenu(
-            frame=self.master, usr=self.user))
+        self.master.bind("j", lambda event: self.startRCM())
+        self.master.bind("g", lambda event: self.startCG())
+        self.master.bind("l", lambda event: self.loadFlashCards())
+        self.master.bind("q", lambda event: self.master.destroy())
+        self.master.bind("r", lambda event: self.user.resetUserInfo())
+        self.master.bind(
+            "m",
+            lambda event: Application.loadMainMenu(
+                frame=self.master, usr=self.user
+            ),
+        )
 
     def create_widgets(self):
 
         self.startRandomCardMode = tk.Button(self)
-        self.startRandomCardMode["text"] = 'Random card mode(j)'
+        self.startRandomCardMode["text"] = "Random card mode(j)"
         self.startRandomCardMode["command"] = self.startRCM
         self.startRandomCardMode.grid()
 
         self.choicesGames = tk.Button(self)
-        self.choicesGames["text"] = 'Game with choices(g)'
+        self.choicesGames["text"] = "Game with choices(g)"
         self.choicesGames["command"] = self.startCG
         self.choicesGames.grid()
 
         self.loadin = tk.Button(
-            text='Load flash cards(l)', command=self.loadFlashCards)
+            text="Load flash cards(l)", command=self.loadFlashCards
+        )
         self.loadin.grid()
 
         self.loadin = tk.Button(
-            text='Reset user info(r)', command=self.user.resetUserInfo)
+            text="Reset user info(r)", command=self.user.resetUserInfo
+        )
         self.loadin.grid()
 
         self.quit = tk.Button(

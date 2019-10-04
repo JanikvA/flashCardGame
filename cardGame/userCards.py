@@ -6,9 +6,8 @@ import os
 import flashCard
 
 
-class userClass():
-    gameDir = os.path.join(os.path.expandvars(
-        "${HOME}"), ".flashCardGame/")
+class userClass:
+    gameDir = os.path.join(os.path.expandvars("${HOME}"), ".flashCardGame/")
     if not os.path.isdir(gameDir):
         os.mkdir(gameDir)
     allUserJSONName = os.path.join(gameDir, "userInfo.json")
@@ -23,30 +22,33 @@ class userClass():
 
     def loadUserInfo(self):
         self.allFlashCards += flashCard.flashCard.readFlashCardJSON(
-            userClass.allUserJSONName)
+            userClass.allUserJSONName
+        )
 
     def resetUserInfo(self):
-        #FIXME make a pop up open to ask if user is sure
+        # FIXME make a pop up open to ask if user is sure
         print("Data for {usr} has been reseted!".format(usr=self.name))
-        self.allFlashCards=[]
+        self.allFlashCards = []
 
     def writeUserInfo(self):
-        data = {"flashCards": [fc.content
-                               for fc in self.allFlashCards]}
-        with open(userClass.allUserJSONName, 'w') as outfile:
+        data = {"flashCards": [fc.content for fc in self.allFlashCards]}
+        with open(userClass.allUserJSONName, "w") as outfile:
             json.dump(data, outfile)
 
     def getFlashCardSubset(self, nCards=20, sortByMemScore=False):
-        subset=[]
+        subset = []
         if sortByMemScore:
-            lowestMemScore=sorted(self.allFlashCards, key=lambda fc: fc.calcMemoryScore())
-            subset=lowestMemScore[:nCards]
+            lowestMemScore = sorted(
+                self.allFlashCards, key=lambda fc: fc.calcMemoryScore()
+            )
+            subset = lowestMemScore[:nCards]
         else:
-            while len(subset)<nCards and len(subset)<len(self.allFlashCards):
-                randomCard=random.choice(self.allFlashCards)
+            while len(subset) < nCards and len(subset) < len(
+                self.allFlashCards
+            ):
+                randomCard = random.choice(self.allFlashCards)
                 if randomCard in subset:
                     continue
                 else:
                     subset.append(randomCard)
         return subset
-        
