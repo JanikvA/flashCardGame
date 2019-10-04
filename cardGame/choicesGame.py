@@ -3,10 +3,14 @@
 import tkinter as tk
 import random
 import main
+import userCards
 
 
 class choicesGame(tk.Frame):
-    def __init__(self, master=None, userName=None):
+    # def __init__(self, master=None, userName=None):
+    def __init__(
+        self, master: tk.Tk = None, userName: userCards.userClass = None
+    ):
         super().__init__(master)
         self.master = master
         self.user = userName
